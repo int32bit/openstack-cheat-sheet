@@ -16,6 +16,8 @@
 
 ## nova
 
+### Tips
+
 List all `error` servers:
 
 ```
@@ -55,6 +57,13 @@ nova list --name "^test"
 ## trove
 
 ## sahara
+
+### About image
+
+* [sahara-image-elements](https://github.com/openstack/sahara-image-elements):Disk image elements for Sahara.
+* [prepared images](http://sahara-files.mirantis.com/images/upstream/).
+* [Building Images for Vanilla Plugin](http://docs.openstack.org/developer/sahara/userdoc/vanilla_imagebuilder.html).
+* [Building Images for Cloudera Plugin](http://docs.openstack.org/developer/sahara/userdoc/cdh_imagebuilder.html).
 
 ## manila
 
