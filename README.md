@@ -32,6 +32,12 @@ List IDs of servers with `error` status:
 nova list --minimal --status error --all-tenants | tail -n +4 | head -n -1 | cut -d ' ' -f 2
 ```
 
+List all the servers whose name starts with "test":
+
+```
+nova list --name "^test"
+```
+
 ## cinder
 
 ## neutron
