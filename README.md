@@ -1,5 +1,18 @@
 # Openstack Cheat Sheet
 
+## Official
+
+* [Home](http://www.openstack.org/)
+* [Github](https://github.com/openstack/openstack)
+* [Docs](http://docs.openstack.org/)
+* [Mailing lists](http://lists.openstack.org/cgi-bin/mailman/listinfo)
+* [IRC(freenode)](https://wiki.openstack.org/wiki/IRC)
+* [Code review](https://review.openstack.org)
+* [Roadmap](https://www.openstack.org/software/roadmap/)
+* [Wiki](https://wiki.openstack.org/wiki/Main_Page)
+* [Blueprints](https://blueprints.launchpad.net/openstack)
+* [Bugs](https://bugs.launchpad.net/openstack)
+
 ## Automatic Deployment
 
 * [Devstack](http://docs.openstack.org/developer/devstack/)(Oneiric powered development environment for openstack.)
