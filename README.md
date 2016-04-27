@@ -8,6 +8,7 @@
 * [openstack-puppet](https://wiki.openstack.org/wiki/Puppet):Bring scalable and reliable IT automation to OpenStack cloud deployments using puppet.
 * [openstack-ansible](https://github.com/openstack/openstack-ansible):Ansible playbooks for deploying OpenStack.
 * [kolla](https://github.com/openstack/kolla):Deploying OpenStack using Docker.
+* [TripleO](https://wiki.openstack.org/wiki/TripleO):A program aimed at installing, upgrading and operating OpenStack clouds using OpenStack's own cloud facilities as the foundations
 
 ## keystore
 
