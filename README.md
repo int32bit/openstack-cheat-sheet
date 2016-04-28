@@ -13,6 +13,7 @@
 * [Blueprints](https://blueprints.launchpad.net/openstack)
 * [Bugs](https://bugs.launchpad.net/openstack)
 * [Companies](https://www.openstack.org/foundation/companies/)(Companies Supporting The OpenStack Foundation)
+* [Contributions(stacklytics)](http://stackalytics.com/)(Provide transparent and meaningful statistics regarding contributions to both OpenStack itself and projects related to OpenStack.)
 
 ## Members
 
