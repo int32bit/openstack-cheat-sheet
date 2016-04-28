@@ -12,6 +12,47 @@
 * [Wiki](https://wiki.openstack.org/wiki/Main_Page)
 * [Blueprints](https://blueprints.launchpad.net/openstack)
 * [Bugs](https://bugs.launchpad.net/openstack)
+* [Companies](https://www.openstack.org/foundation/companies/)(Companies Supporting The OpenStack Foundation)
+
+## Members
+
+### Platinum Members
+
+Provide a significant portion of the funding to achieve the Foundation's mission of protecting, empowering and promoting the OpenStack community and software. Each Platinum Member's company strategy aligns with the OpenStack mission and is responsible for committing full-time resources toward the project. There are **eight Platinum Members** at any given time, each of which holds a seat on the Board of Directors.
+
+* [AT&T](http://www.att.com/)
+* [Canonical](https://www.openstack.org/foundation/companies/profile/canonical)
+* [Hewlett Packard Enterprise](https://www.openstack.org/foundation/companies/profile/hewlett-packard-enterprise)
+* [IBM](https://www.openstack.org/foundation/companies/profile/ibm)
+* [Intel](http://www.intel.cn/content/www/cn/zh/homepage.html)
+* [Rackspace](https://www.openstack.org/foundation/companies/profile/rackspace)
+* [Red Hat, Inc.](https://www.openstack.org/foundation/companies/profile/page-0)
+* [SUSE](https://www.openstack.org/foundation/companies/profile/suse)
+
+### Gold Members
+
+Provide funding and pledge strategic alignment to the OpenStack mission. There can be up to twenty-four Gold Members at any given time, subject to board approval. 
+
+* [Aptira](https://aptira.com/)
+* [CCAT](https://www.openstack.org/foundation/companies/profile/ccat)
+* [Cisco](https://www.openstack.org/foundation/companies/profile/cisco)
+* [Dell](https://www.openstack.org/foundation/companies/profile/dell)
+* [DreamHost](https://www.openstack.org/foundation/companies/profile/dreamhost)
+* [EasyStack](https://www.openstack.org/foundation/companies/profile/easystack)
+* [EMC](http://www.emc.com/en-us/index.htm)
+* [Ericsson](https://www.openstack.org/foundation/companies/profile/ericsson)
+* [Fujitsu](https://www.openstack.org/foundation/companies/profile/fujitsu)
+* [Hitachi](https://www.openstack.org/foundation/companies/profile/Hitachi-Data-Systems)
+* [Huawei](https://www.openstack.org/foundation/companies/profile/huawei)
+* [inwinSTACK](https://www.openstack.org/foundation/companies/profile/inwinstack)
+* [Juniper Networks](https://www.openstack.org/foundation/companies/profile/juniper-networks)
+* [Mirantis](https://www.openstack.org/foundation/companies/profile/mirantis)
+* [NEC](https://www.openstack.org/foundation/companies/profile/nec)
+* [NetApp](https://www.openstack.org/foundation/companies/profile/netapp)
+* [Symantec](https://www.openstack.org/foundation/companies/profile/symantec-8)
+* [UnitedStack Inc.](https://www.openstack.org/foundation/companies/profile/unitedstack)
+* [Virtuozzo](https://www.openstack.org/foundation/companies/profile/virtuozzo)
+* [Yahoo Inc.](https://www.openstack.org/foundation/companies/profile/yahoo)
 
 ## Automatic Deployment
 
@@ -33,6 +74,7 @@
 * [Nebula](https://www.nebula.com/)(Has been shut down)
 * [easystack](http://www.easystack.cn/)(OpenStack cloud platform and services provider, founded in Feb.2014.)
 * [UMCloud](http://www.umcloud.com/)(A joint venture of Mirantis and Ucloud in China.)
+* [inwinSTACK](www.inwinstack.com)(The largest open source RD center in Taiwan, striving to do everything in open source.)
 
 ## Competitors
 
@@ -91,7 +133,7 @@ nova list --name "^test"
 
 ### About image
 
-* [sahara-image-elements](https://github.com/openstack/sahara-image-elements):Disk image elements for Sahara.
+* [sahara-image-elements](https://github.com/openstack/sahara-image-elements)(Disk image elements for Sahara.)
 * [prepared images](http://sahara-files.mirantis.com/images/upstream/).
 * [Building Images for Vanilla Plugin](http://docs.openstack.org/developer/sahara/userdoc/vanilla_imagebuilder.html).
 * [Building Images for Cloudera Plugin](http://docs.openstack.org/developer/sahara/userdoc/cdh_imagebuilder.html).
