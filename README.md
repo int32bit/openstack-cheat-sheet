@@ -121,7 +121,26 @@ List all the servers whose name starts with "test":
 nova list --name "^test"
 ```
 
+Attached volumes' ID:
+
+```
+nova show --minimal 65e761b3-63b4-498f-9735-08e246c1e976 | grep 'os-extended-volumes:volumes_attached' | cut -d '|' -f 3 | jq '.[].id' | sed 's/"//g'
+```
+
+Attached volumes' ID and the mapped device name:
+
+```
+nova show --minimal | grep 'os-extended-volumes:volumes_attached' | cut -d '|' -f 3 | jq '.[]|.id + " " + .device_name' | sed 's/"//g'
+```
+
+
 ## cinder
+
+List ID of `error` volumes:
+
+```
+inder list --status error --all-tenants | tail -n +4 | head -n -1 | cut -d '|' -f 2
+```
 
 ## neutron
 
