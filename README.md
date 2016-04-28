@@ -3,6 +3,7 @@
 ## Official
 
 * [Home](http://www.openstack.org/)
+* [Source Code](http://git.openstack.org/cgit)
 * [Github](https://github.com/openstack/openstack)
 * [Docs](http://docs.openstack.org/)
 * [Mailing lists](http://lists.openstack.org/cgi-bin/mailman/listinfo)
