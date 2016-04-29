@@ -5,6 +5,7 @@
 * [Home](http://www.openstack.org/)
 * [Source Code](http://git.openstack.org/cgit)
 * [Github](https://github.com/openstack/openstack)
+* [Projects](http://governance.openstack.org/reference/projects/index.html) (Big Tent Governance)
 * [Docs](http://docs.openstack.org/)
 * [Mailing lists](http://lists.openstack.org/cgi-bin/mailman/listinfo)
 * [IRC(freenode)](https://wiki.openstack.org/wiki/IRC)
@@ -13,8 +14,8 @@
 * [Wiki](https://wiki.openstack.org/wiki/Main_Page)
 * [Blueprints](https://blueprints.launchpad.net/openstack)
 * [Bugs](https://bugs.launchpad.net/openstack)
-* [Companies](https://www.openstack.org/foundation/companies/)(Companies Supporting The OpenStack Foundation)
-* [Contributions(stacklytics)](http://stackalytics.com/)(Provide transparent and meaningful statistics regarding contributions to both OpenStack itself and projects related to OpenStack.)
+* [Companies](https://www.openstack.org/foundation/companies/) (Companies Supporting The OpenStack Foundation)
+* [Contributions(stacklytics)](http://stackalytics.com/) (Provide transparent and meaningful statistics regarding contributions to both OpenStack itself and projects related to OpenStack.)
 
 ## Members
 
