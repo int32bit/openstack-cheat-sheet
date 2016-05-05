@@ -143,7 +143,7 @@ nova show --minimal | grep 'os-extended-volumes:volumes_attached' | cut -d '|' -
 List ID of `error` volumes:
 
 ```
-inder list --status error --all-tenants | tail -n +4 | head -n -1 | cut -d '|' -f 2
+cinder list --status error --all-tenants | tail -n +4 | head -n -1 | cut -d '|' -f 2
 ```
 
 List all the snapshots of the volume specified by ID:
