@@ -146,6 +146,24 @@ List ID of `error` volumes:
 inder list --status error --all-tenants | tail -n +4 | head -n -1 | cut -d '|' -f 2
 ```
 
+List all the snapshots of the volume specified by ID:
+
+```
+cinder snapshot-list --volume-id 2ad21c7d-dbef-49a9-ba6c-64c258101eb0 | grep -P "\w{8}-\w{4}" | cut -d ' ' -f 2
+```
+
+List all the snapshots of the volume specified by name:
+
+```
+cinder list | grep "YOUR_VOLUME_NAME" | awk '{system("cinder snapshot-list --volume-id " $2)}' | grep -P "\w{8}-\w{4}" | cut -d ' ' -f 2
+```
+
+Remove all the snapshots of the volume specified by name:
+
+```
+cinder list  | grep 'YOUR_VOLUME_NAME' | awk '{system("cinder snapshot-list | grep " $2)}' | awk '{system("cinder snapshot-delete " $2)}'
+```
+
 ## neutron
 
 ## swift
