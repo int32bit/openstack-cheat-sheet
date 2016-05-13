@@ -172,6 +172,14 @@ cinder list  | grep 'YOUR_VOLUME_NAME' | awk '{system("cinder snapshot-list | gr
 
 ## trove
 
+## heat
+
+* [heat templates](http://apps.openstack.org/#tab=heat-templates)(Heat demo templates, like `Hello World`, `OpenShift-F19`,etc.
+
+## murano
+
+* [murano packages](http://apps.openstack.org/#tab=murano-apps)(Murano packages, like `Apache HTTP Server`, `Docker & Kubernetes Bundle`, `Jenkins`, `Kubernetes Cluster`, etc.
+
 ## sahara
 
 ### About image
