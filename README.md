@@ -91,6 +91,8 @@ Provide funding and pledge strategic alignment to the OpenStack mission. There c
 
 ## glance
 
+* [images registry](http://apps.openstack.org/#tab=glance-images): Download images, like `Ubuntu`, `CentOS`,`Sahara Apache Spark 1.0.0`,etc.
+
 ## nova
 
 ### Tips
