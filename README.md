@@ -68,6 +68,8 @@ Provide funding and pledge strategic alignment to the OpenStack mission. There c
 * [TripleO](https://wiki.openstack.org/wiki/TripleO)(A program aimed at installing, upgrading and operating OpenStack clouds using OpenStack's own cloud facilities as the foundations.)
 * [SaltStack](https://github.com/cloudbase/salt-openstack)(Deploying Openstack using saltstack.)
 * [packstack](https://github.com/openstack/packstack) (Install utility to deploy openstack on multiple hosts.)
+* [stackanetes](https://github.com/stackanetes/stackanetes)(Demo version of OpenStack on Kubernetes.)
+
 
 ## Vender
 
