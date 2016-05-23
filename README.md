@@ -17,6 +17,7 @@
 * [Companies](https://www.openstack.org/foundation/companies/) (Companies Supporting The OpenStack Foundation)
 * [Contributions(stacklytics)](http://stackalytics.com/) (Provide transparent and meaningful statistics regarding contributions to both OpenStack itself and projects related to OpenStack.)
 * [Firewalls and default ports](http://docs.openstack.org/mitaka/config-reference/firewalls-default-ports.html)(The default TCP ports used by various services involved in an OpenStack deployment)
+* [Community support](http://docs.openstack.org/mitaka/config-reference/common/app_support.html)(Help you run and use OpenStack, like document,OpenStack distribution packages,etc.)
 
 ## Members
 
