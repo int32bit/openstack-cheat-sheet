@@ -143,6 +143,19 @@ Attached volumes' ID and the mapped device name:
 nova show --minimal | grep 'os-extended-volumes:volumes_attached' | cut -d '|' -f 3 | jq '.[]|.id + " " + .device_name' | sed 's/"//g'
 ```
 
+Remove all servers (**dangrous**)
+
+Only this tenant:
+
+```bash
+nova delete `nova list --fields id | grep -P '\w{8}-.*' | awk '{print $ 2}' | tr '\n' ' '`
+```
+
+Clean up all tenants' servers:
+
+```bash
+nova delete `nova list --all-tenants --fields id | grep -P '\w{8}-.*' | awk '{print $ 2}' | tr '\n' ' '`
+```
 
 ## cinder
 
