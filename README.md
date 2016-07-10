@@ -97,6 +97,53 @@ Provide funding and pledge strategic alignment to the OpenStack mission. There c
 
 * [images registry](http://apps.openstack.org/#tab=glance-images): Download images, like `Ubuntu`, `CentOS`,`Sahara Apache Spark 1.0.0`,etc.
 
+
+Upload image use glance may be very slow as using http transmission. if use ceph rbd backend storage, we can speed up by rbd import operation:
+
+```bash
+upload()
+{
+        IMAGE_PATH=$1 # get image path
+        if [[ -z $IMAGE_PATH ]]; then
+                echo "Usage: $0 <IMAGE>"
+                exit 1
+        fi
+        IMAGE=$(basename $IMAGE_PATH) # get image file name
+        SUFFIX=${IMAGE##*.} # get the format of the image
+        POOL=${2:-openstack-00}
+        NAME=${IMAGE%%.*} # extract image name from path
+
+        # if not raw format, we should convert it
+        if [[ x$SUFFIX != xraw ]]; then
+                TEMP_PATH=/tmp/${IMAGE}.raw
+                qemu-image convert -O raw $IMAGE_PATH $TEMP_PATH
+        fi
+        if [[ -n $TEMP_PATH ]]; then
+                TRAGET_PATH=$TEMP_PATH
+        else
+                TARGET_PATH=$IMAGE_PATH
+        fi
+        
+        # get cluster id and image id  
+        CLUSTER_ID=$(ceph -s 2>/dev/null | grep -w "cluster" | awk '{print $2}')
+        IMAGE_ID=$(glance image-create | grep -w 'id' | awk '{print $4}')
+
+        # import image use rbd
+        rbd --pool=openstack-00 import $TARGET_PATH  --image=$IMAGE_ID --new-format --order 24
+        rbd snap create $POOL/${IMAGE_ID}@snap
+        rbd snap protect $POOL/${IMAGE_ID}@snap
+
+        # update image metadata
+        glance --os-image-api-version=1 image-update --is-public True --disk-format raw --container-format bare --name $NAME $IMAGE_ID
+        glance --os-image-api-version=1 image-update --location rbd://$CLUSTER_ID/$POOL/$IMAGE_ID/snap $IMAGE_ID
+
+        # remove temp file if exists
+        if [[ -n $TEMP_PATH ]]; then
+                rm $TEMP_PATH
+        fi
+}
+```
+
 ## nova
 
 ### Tips
