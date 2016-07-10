@@ -98,7 +98,7 @@ Provide funding and pledge strategic alignment to the OpenStack mission. There c
 * [images registry](http://apps.openstack.org/#tab=glance-images): Download images, like `Ubuntu`, `CentOS`,`Sahara Apache Spark 1.0.0`,etc.
 
 
-Upload image use glance may be very slow as using http transmission. if use ceph rbd backend storage, we can speed up by rbd import operation:
+Upload image uses glance may be very slow as using http transmission. if use ceph rbd backend storage, we can speed up by rbd import operation:
 
 ```bash
 upload()
