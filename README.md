@@ -98,7 +98,7 @@ Provide funding and pledge strategic alignment to the OpenStack mission. There c
 * [images registry](http://apps.openstack.org/#tab=glance-images): Download images, like `Ubuntu`, `CentOS`,`Sahara Apache Spark 1.0.0`,etc.
 
 
-Upload image uses glance may be very slow as using http transmission. if use ceph rbd backend storage, we can speed up by rbd import operation:
+Upload image uses glance may be very slow as using http transmission. If use ceph rbd backend storage, we can speed up via rbd import command:
 
 ```bash
 upload()
@@ -111,15 +111,15 @@ upload()
         IMAGE=$(basename $IMAGE_PATH) # get image file name
         SUFFIX=${IMAGE##*.} # get the format of the image
         POOL=${2:-openstack-00}
-        NAME=${IMAGE%%.*} # extract image name from path
+        NAME=${IMAGE%.*} # extract image name from path
 
         # if not raw format, we should convert it
         if [[ x$SUFFIX != xraw ]]; then
                 TEMP_PATH=/tmp/${IMAGE}.raw
-                qemu-image convert -O raw $IMAGE_PATH $TEMP_PATH
+                qemu-img convert -O raw $IMAGE_PATH $TEMP_PATH
         fi
         if [[ -n $TEMP_PATH ]]; then
-                TRAGET_PATH=$TEMP_PATH
+                TARGET_PATH=$TEMP_PATH
         else
                 TARGET_PATH=$IMAGE_PATH
         fi
