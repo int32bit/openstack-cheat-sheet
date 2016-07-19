@@ -91,6 +91,20 @@ Provide funding and pledge strategic alignment to the OpenStack mission. There c
 * [Vmware](http://www.vmware.com/)(The industry-leading virtualization software company.)
 * [Docker](https://www.docker.com)(Docker containers and tooling make building and shipping applications dramatically easier and faster.)
 
+## handy scripts
+
+### Check Openstack Services
+
+```bash
+for service in `systemctl list-units | grep -P "(openstack)|(neutron)"| sed 's/●//g' | awk  '{print $1}'`; do
+        if systemctl is-active $service &>/dev/null; then
+                echo -e "\e[32m$service is OK!\e[0m"
+        else
+                echo -e "\e[31m$service fail to start!\e[0m"
+        fi
+done
+```
+
 ## keystore
 
 ## glance
