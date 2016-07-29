@@ -128,7 +128,8 @@ upload()
         NAME=${IMAGE%.*} # extract image name from path
 
         # if not raw format, we should convert it
-        if [[ x$SUFFIX != xraw ]]; then
+        FORMAT=$(qemu-img info ubuntu-16.04.1-server-amd64.iso  | grep "file format" | awk '{print $3}')
+        if [[ $FORMAT != raw ]]; then
                 TEMP_PATH=/tmp/${IMAGE}.raw
                 qemu-img convert -O raw $IMAGE_PATH $TEMP_PATH
         fi
