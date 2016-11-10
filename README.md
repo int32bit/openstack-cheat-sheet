@@ -1,3 +1,5 @@
+[中文版本](README_zh.md)
+
 # Openstack Cheat Sheet
 
 ## Official
