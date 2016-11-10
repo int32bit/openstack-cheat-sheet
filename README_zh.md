@@ -3,8 +3,8 @@
 ## 官方资源
 
 * [主页](http://www.openstack.org/)
-* [源码](http://git.openstack.org/cgit)
-* [Github](https://github.com/openstack/openstack)
+* [git源码地址](http://git.openstack.org/cgit)
+* [Github源码镜像](https://github.com/openstack/openstack)
 * [组件项目](http://governance.openstack.org/reference/projects/index.html) (Big Tent Governance)
 * [官方文档](http://docs.openstack.org/)
 * [邮件列表](http://lists.openstack.org/cgi-bin/mailman/listinfo)
