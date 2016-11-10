@@ -16,7 +16,9 @@
 * [Bugs](https://bugs.launchpad.net/openstack)
 * [支持公司](https://www.openstack.org/foundation/companies/) (Companies Supporting The OpenStack Foundation)
 * [贡献列表(来源于stacklytics)](http://stackalytics.com/) (Provide transparent and meaningful statistics regarding contributions to both OpenStack itself and projects related to OpenStack.)
-* [加入社区开发文档](http://docs.openstack.org/infra/manual/developers.html)(一步步教你如何加入社区开发)
+* [社区开发文档](http://docs.openstack.org/infra/manual/developers.html)(一步步教你如何加入社区开发)
+* [代码提交测试](http://docs.openstack.org/infra/manual/sandbox.html#sandbox)(新手代码提交测试，新手可以通过此熟悉代码提交流程)
+
 
 ## 成员
 
