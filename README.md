@@ -22,6 +22,7 @@
 * [Community support](http://docs.openstack.org/mitaka/config-reference/common/app_support.html)(Help you run and use OpenStack, like document,OpenStack distribution packages,etc.)
 * [Developer’s Guide](http://docs.openstack.org/infra/manual/developers.html)(The goal of this document is to walk you through the concepts and specifics that should be understood while contributing to OpenStack.)
 * [Learn the Gerrit Workflow in the Sandbox](http://docs.openstack.org/infra/manual/sandbox.html)(http://docs.openstack.org/infra/manual/sandbox.html#sandbox)
+* [Git Commit Good Practice](https://wiki.openstack.org/wiki/GitCommitMessages#Summary_of_GIT_commit_message_structure)(Based on experience doing code development, bug troubleshooting and code review across a number of projects using Git, including libvirt, QEMU and OpenStack Nova.)
 
 ## Members
 

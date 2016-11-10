@@ -20,6 +20,7 @@
 * [贡献列表(来源于stacklytics)](http://stackalytics.com/) (Provide transparent and meaningful statistics regarding contributions to both OpenStack itself and projects related to OpenStack.)
 * [社区开发文档](http://docs.openstack.org/infra/manual/developers.html)(一步步教你如何加入社区开发)
 * [代码提交测试](http://docs.openstack.org/infra/manual/sandbox.html#sandbox)(新手代码提交测试，新手可以通过此熟悉代码提交流程)
+* [git commit message规范](https://wiki.openstack.org/wiki/GitCommitMessages#Summary_of_GIT_commit_message_structure)(提交代码时必须遵循的message的规范)
 
 
 ## 成员
