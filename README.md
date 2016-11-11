@@ -23,6 +23,7 @@
 * [Developer’s Guide](http://docs.openstack.org/infra/manual/developers.html)(The goal of this document is to walk you through the concepts and specifics that should be understood while contributing to OpenStack.)
 * [Learn the Gerrit Workflow in the Sandbox](http://docs.openstack.org/infra/manual/sandbox.html)(http://docs.openstack.org/infra/manual/sandbox.html#sandbox)
 * [Git Commit Good Practice](https://wiki.openstack.org/wiki/GitCommitMessages#Summary_of_GIT_commit_message_structure)(Based on experience doing code development, bug troubleshooting and code review across a number of projects using Git, including libvirt, QEMU and OpenStack Nova.)
+* [OpenStack Style Guidelines](http://docs.openstack.org/developer/hacking/#creating-unit-tests)(As such common style helps developers understand code in reviews, move between projects smoothly, and overall make the code more maintainable)
 
 ## Members
 
