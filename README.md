@@ -23,6 +23,7 @@
 * [git commit message规范](https://wiki.openstack.org/wiki/GitCommitMessages#Summary_of_GIT_commit_message_structure)(提交代码时必须遵循的message的规范)
 * [Openstack代码规范](http://docs.openstack.org/developer/hacking/#creating-unit-tests)(**Openstack代码规范，开发人员必读**)
 * [Openstack各个组件的成熟度和热度统计](http://www.openstack.org/software/project-navigator)
+* [Openstack版本列表](https://releases.openstack.org/)(可以查看数字版本对应Openstack版本代号，如Nova版本的13.x.x对应mitaka版本)
 
 
 ## 成员
