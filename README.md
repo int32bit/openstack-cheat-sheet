@@ -2,6 +2,43 @@
 
 # Openstack Cheat Sheet
 
+## OpenStack服务与AWS服务对比
+
+|OpenStack|AWS|Service|Description|
+|---------|---|-------|-----------|
+|Keystone|AWS IAM|认证服务|身份验证、服务规则和服务令牌|
+|Glance|AMI|镜像服务|镜像仓库，负责镜像的上传、注册、检索、元数据管理以及下载等功能|
+|Nova|EC2|计算服务|管理计算资源，包括虚拟机以及裸机实例。|
+|Neutron|Networking|网络服务|提供虚拟网络服务。|
+|Cinder|EBS|块存储服务|为虚拟机提供弹性云硬盘功能。|
+|Swift|S3|对象存储服务|对象存储服务，类似于百度网盘功能。|
+|Mistral|Amazon SWF|工作流(Workflow)服务|任务编排以及定时任务管理，比如定时备份、定时开关机等。|
+|Sahara|EMR|大数据服务|Hadoop/Spark集群的部署以及Job提交。|
+|Trove|ElastiCache & RDS|数据库服务|提供弹性的数据库服务，支持Mysql、Redis等数据库。|
+|Ceilometer|CloudWatch|资源监控服务|资源监控服务，收集各个组件的资源使用情况。|
+|Heat|CloudFormation|资源编排服务|使用模板批量管理资源|
+|Senlin|Auto Scaling|集群弹性伸缩服务|支持资源的弹性水平和垂直扩展功能|
+|Zaqar|SQS & SNS|消息队列服务、消息推送服务|
+|Ironic|-|裸机服务|管理裸机资源|AWS和OpenStack分别使用EC2和Nova管理裸机实例|
+|Magnum|-|容器编排服务|创建和管理Swarm、k8s等容器编排服务|
+|Zun|ECS(Amazon EC2 Container Service)|容器服务|提供容器管理服务|
+|Designate|Route 53|DNS服务|提供了云域名系统|
+|Barbican|-|密钥管理服务|-|
+|Congress|-|policy as a service|基于异构云环境的策略声明、监控、实施、审计的框架|
+|Horizon|AWS console|面板服务|控制台，为OpenStack的提供Web UI界面管理资源|
+|Cloudkitty|Billing|计费服务|                                     
+|Freezer|[Freezer](https://github.com/stevegury/freezer)（非官方）|备份服务|文件系统、数据库数据、虚拟机、磁盘自动增量备份到Swift中|
+|Manila|EFS|文件共享服务|提供文件系统共享服务，如NFS|
+|Murano|AWS Service Catalog|应用目录服务|类似应用商城，通过统一的框架和API实现应用程序快速部署和应用程序生命周期管理的功能，比如部署Apache HTTP服务
+|Searchlight|-|搜索服务|OpenStack的资源在Elasticsearch建立索引，提供快速搜索OpenStack平台上的资源|
+|Solum|-|-|在OpenStack IaaS平台上，构建PaaS层的持续集成/持续交付（CI/CD）应用，可以简单理解为是一个应用程序App的集成开发平台|
+|Tacker||NFV Orchestrator service||
+|Tricircle||networking automation|实现多区域OpenStack平台的Neutron网络管理|
+|Vitrage|-|RCA (Root Cause Analysis) service，平台问题定位分析服务|用于组织、分析和扩展OpenStack的告警和事件，在真正的问题发生前找到根本原因|
+|Watcher|-|资源优化服务|根据一定的策略、目标以及采集的数据生成资源优化策略|
+|[Karbor](https://wiki.openstack.org/wiki/Karbor)||Application Data Protection as a Service||
+
+
 ## 官方资源
 
 * [主页](http://www.openstack.org/)
