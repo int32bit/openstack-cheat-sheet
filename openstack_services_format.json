@@ -1,0 +1,528 @@
+{
+    "grouped_components": {
+        "Application Services": [
+            {
+                "adoption": "67",
+                "age": 5,
+                "code_name": "Heat",
+                "description": "Heat orchestrates the infrastructure resources for a cloud application based on templates in the form of text files that can be treated like code. Heat provides both an OpenStack-native ReST API and a CloudFormation-compatible Query API. Heat also provides an autoscaling service that integrates with the OpenStack Telemetry services, so you can include a scaling group as a resource in a template.",
+                "id": 9,
+                "mascot_css_class": "Heat",
+                "maturity_points": "5",
+                "name": "Orchestration",
+                "slug": "heat"
+            },
+            {
+                "adoption": "4",
+                "age": 3,
+                "code_name": "Zaqar",
+                "description": "Zaqar is a multi-tenant cloud messaging service for web and mobile developers. The service features a fully RESTful API, which developers can use to send messages between various components of their SaaS and mobile applications. Underlying this API is an efficient messaging engine designed with scalability and security in mind. Other OpenStack components can integrate with Zaqar to surface events to end users and to communicate with guest agents that run in the \"over-cloud\" layer. Cloud operators can leverage Zaqar to provide equivalents of SQS and SNS to their customers.",
+                "id": 13,
+                "mascot_css_class": "Barbican",
+                "maturity_points": "4",
+                "name": "Messaging Service",
+                "slug": "zaqar"
+            },
+            {
+                "adoption": "11",
+                "age": 2,
+                "code_name": "Murano",
+                "description": "Murano enables application developers and cloud administrators to publish various cloud-ready applications in a browsable catalog. Cloud users -- including inexperienced ones -- can then use the catalog to compose reliable application environments with the push of a button. Murano uses OpenStack Heat to orchestrate infrastructure resources for the application.",
+                "id": 18,
+                "mascot_css_class": "Murano",
+                "maturity_points": "1",
+                "name": "Application Catalog",
+                "slug": "murano"
+            },
+            {
+                "adoption": "2",
+                "age": 1,
+                "code_name": "Solum",
+                "description": "To make cloud services easier to consume and integrate with your application development process by automating the source-to-image process, and simplifying app-centric deployment.",
+                "id": 20,
+                "mascot_css_class": "Solum",
+                "maturity_points": "0",
+                "name": "Software Development Lifecycle Automation",
+                "slug": "solum"
+            }
+        ],
+        "Compute": [
+            {
+                "adoption": "95",
+                "age": 7,
+                "code_name": "Nova",
+                "description": "To implement services and associated libraries to provide massively scalable, on demand, self service access to compute resources, including bare metal, virtual machines, and containers.",
+                "id": 2,
+                "mascot_css_class": "Nova",
+                "maturity_points": "7",
+                "name": "Compute Service",
+                "slug": "nova"
+            },
+            {
+                "adoption": "95",
+                "age": 7,
+                "code_name": "Glance",
+                "description": "Glance image services include discovering, registering, and retrieving virtual machine images. Glance has a RESTful API that allows querying of VM image metadata as well as retrieval of the actual image. VM images made available through Glance can be stored in a variety of locations from simple filesystems to object-storage systems like the OpenStack Swift project.",
+                "id": 7,
+                "mascot_css_class": "Glance",
+                "maturity_points": "5",
+                "name": "Image Service",
+                "slug": "glance"
+            },
+            {
+                "adoption": "21",
+                "age": 3,
+                "code_name": "Ironic",
+                "description": "Ironic is an OpenStack project which provisions bare metal (as opposed to virtual) machines. It may be used independently or as part of an OpenStack Cloud, and integrates with the OpenStack Identity (keystone), Compute (nova), Network (neutron), Image (glance) and Object (swift) services. When the Bare Metal service is appropriately configured with the Compute and Network services, it is possible to provision both virtual and physical machines through the Compute service\u2019s API.",
+                "id": 12,
+                "mascot_css_class": "Ironic",
+                "maturity_points": "5",
+                "name": "Bare Metal Provisioning Service",
+                "slug": "ironic"
+            },
+            {
+                "adoption": "11",
+                "age": 2,
+                "code_name": "Magnum",
+                "description": "Magnum makes container orchestration engines such as Docker Swarm, Kubernetes, and Apache Mesos available as first class resources in OpenStack. Magnum uses Heat to orchestrate an OS image which contains Docker and Kubernetes and runs that image in either virtual machines or bare metal in a cluster configuration.",
+                "id": 17,
+                "mascot_css_class": "Magnum",
+                "maturity_points": "2",
+                "name": "Container Orchestration Engine Provisioning",
+                "slug": "magnum"
+            },
+            {
+                "adoption": "0",
+                "age": 1,
+                "code_name": "Storlets",
+                "description": "Openstack Storlets is an extension to Openstack Swift with the ability to run user defined computations - called storlets - inside the object store in a secure and isolated manner through the use of Docker containers. A storlet is a compiled and packaged code (e.g. a .jar file) that can be uploaded to Swift as any other object. Once uploaded the storlet can be invoked over data objects in Swift.",
+                "id": 21,
+                "mascot_css_class": "Storlets",
+                "maturity_points": "0",
+                "name": "Computable Object Store",
+                "slug": "storlets"
+            },
+            {
+                "adoption": "0",
+                "age": 1,
+                "code_name": "Zun",
+                "description": "Zun provides an OpenStack API for launching and managing containers backed by different container technologies. Different from Magnum, Zun is for users who want to treat containers as OpenStack-managed resource. Containers managed by Zun are supposed to be integrated well with other OpenStack resources, such as Neutron network and Cinder volume. Users are provided a simplified APIs to manage containers without the need to explore the complexities of different container technologies.",
+                "id": 22,
+                "mascot_css_class": "Zun",
+                "maturity_points": "1",
+                "name": "Container Management Service",
+                "slug": "zun"
+            }
+        ],
+        "Data & Analytics": [
+            {
+                "adoption": "13",
+                "age": 4,
+                "code_name": "Trove",
+                "description": "Trove is a database-as-a-service provisioning relational and non-relational database engines",
+                "id": 10,
+                "mascot_css_class": "Trove",
+                "maturity_points": "3",
+                "name": "Database as a Service",
+                "slug": "trove"
+            },
+            {
+                "adoption": "10",
+                "age": 3,
+                "code_name": "Sahara",
+                "description": "The sahara project aims to provide users with a simple means to provision data processing frameworks (such as Hadoop, Spark and Storm) on OpenStack. This is accomplished by specifying configuration parameters such as the framework version, cluster topology, node hardware details and more.",
+                "id": 11,
+                "mascot_css_class": "Sahara",
+                "maturity_points": "3",
+                "name": "Big Data Processing Framework Provisioning",
+                "slug": "sahara"
+            },
+            {
+                "adoption": "0",
+                "age": 1,
+                "code_name": "Searchlight",
+                "description": "The Searchlight project provides indexing and search capabilities across OpenStack resources. Its goal is to achieve high performance and flexible querying combined with near real-time indexing. It uses Elasticsearch, a real-time distributed indexing and search engine built on Apache Lucene, but adds OpenStack authentication and Role Based Access Control to provide appropriate protection of data.",
+                "id": 23,
+                "mascot_css_class": "Searchlight",
+                "maturity_points": "0",
+                "name": "Indexing and Search",
+                "slug": "searchlight"
+            }
+        ],
+        "Deployment Tools": [
+            {
+                "adoption": "0",
+                "age": 1,
+                "code_name": "Chef OpenStack",
+                "description": "The Chef OpenStack team builds Chef cookbooks for deploying OpenStack services.",
+                "id": 24,
+                "mascot_css_class": "Chef OpenStack",
+                "maturity_points": "1",
+                "name": "Chef cookbooks for OpenStack",
+                "slug": "chef-openstack"
+            },
+            {
+                "adoption": "12",
+                "age": 1,
+                "code_name": "Kolla",
+                "description": "Kolla provides production-ready containers and deployment tools for operating OpenStack clouds that are scalable, fast, reliable, and upgradable using community best practices.",
+                "id": 25,
+                "mascot_css_class": "Kolla",
+                "maturity_points": "1",
+                "name": "Container deployment",
+                "slug": "kolla"
+            },
+            {
+                "adoption": "0",
+                "age": 1,
+                "code_name": "OpenStack Charms",
+                "description": "Develop and maintain Juju Charms for deploying and managing OpenStack services.",
+                "id": 26,
+                "mascot_css_class": "OpenStack Charms",
+                "maturity_points": "0",
+                "name": "Juju Charms for OpenStack",
+                "slug": "openstack-charms"
+            },
+            {
+                "adoption": "0",
+                "age": 1,
+                "code_name": "OpenStack-Ansible",
+                "description": null,
+                "id": 27,
+                "mascot_css_class": "Barbican",
+                "maturity_points": "0",
+                "name": "Ansible Playbooks for OpenStack",
+                "slug": "openstack-ansible"
+            },
+            {
+                "adoption": "0",
+                "age": 1,
+                "code_name": "Puppet OpenStack",
+                "description": "The Puppet modules for OpenStack bring scalable and reliable IT automation to OpenStack cloud deployments.",
+                "id": 28,
+                "mascot_css_class": "Puppet OpenStack",
+                "maturity_points": "0",
+                "name": "Puppet Modules for OpenStack",
+                "slug": "puppet-openstack"
+            },
+            {
+                "adoption": "9",
+                "age": 1,
+                "code_name": "TripleO",
+                "description": "Develop and maintain tooling and infrastructure able to deploy OpenStack in production, using OpenStack itself wherever possible.",
+                "id": 29,
+                "mascot_css_class": "TripleO",
+                "maturity_points": "0",
+                "name": "Deployment service",
+                "slug": "tripleo"
+            }
+        ],
+        "Management Tools": [
+            {
+                "adoption": "87",
+                "age": 6,
+                "code_name": "Horizon",
+                "description": "Horizon is the canonical implementation of OpenStack's dashboard, which is extensible and provides a web based user interface to OpenStack services.",
+                "id": 1,
+                "mascot_css_class": "Horizon",
+                "maturity_points": "6",
+                "name": "Dashboard",
+                "slug": "horizon"
+            },
+            {
+                "adoption": "0",
+                "age": 1,
+                "code_name": "OSclient (CLI)",
+                "description": "Provide a single command-line interface for OpenStack services with a uniform command set and format.",
+                "id": 30,
+                "mascot_css_class": "CLI",
+                "maturity_points": "0",
+                "name": "Command-line client",
+                "slug": "osclient-(cli)"
+            },
+            {
+                "adoption": "23",
+                "age": 1,
+                "code_name": "Rally",
+                "description": "Rally is a benchmarking and performance analysis tool for OpenStack that can be used to automate measuring and profiling focused on how new code changes affect OpenStack performance, detect scaling and performance issues, and investigate how different deployment architectures and hardware affect OpenStack performance. It can be used as a basic tool for an OpenStack CI/CD system that would continuously improve its SLA, performance and stability.",
+                "id": 33,
+                "mascot_css_class": "Rally",
+                "maturity_points": "0",
+                "name": "Benchmark service",
+                "slug": "rally"
+            },
+            {
+                "adoption": "0",
+                "age": 1,
+                "code_name": "Senlin",
+                "description": "Senlin is a clustering service for OpenStack clouds. It creates and operates clusters of homogeneous objects exposed by other OpenStack services. The goal is to make orchestration of collections of similar objects easier.",
+                "id": 34,
+                "mascot_css_class": "Senlin",
+                "maturity_points": "0",
+                "name": "Clustering service",
+                "slug": "senlin"
+            },
+            {
+                "adoption": "0",
+                "age": 1,
+                "code_name": "Vitrage",
+                "description": "Vitrage is the OpenStack RCA (Root Cause Analysis) service for organizing, analyzing and expanding OpenStack alarms & events, yielding insights regarding the root cause of problems and deducing their existence before they are directly detected.",
+                "id": 38,
+                "mascot_css_class": "Vitrage",
+                "maturity_points": "0",
+                "name": "RCA (Root Cause Analysis service)",
+                "slug": "vitrage"
+            },
+            {
+                "adoption": "0",
+                "age": 1,
+                "code_name": "Watcher",
+                "description": "Watcher provides a flexible and scalable resource optimization service for multi-tenant OpenStack-based clouds. Watcher provides a complete optimization loop\u2014including everything from a metrics receiver, optimization processor and an action plan applier.",
+                "id": 39,
+                "mascot_css_class": "Watcher",
+                "maturity_points": "0",
+                "name": "Optimization Service",
+                "slug": "watcher"
+            }
+        ],
+        "Monitoring & Metering": [
+            {
+                "adoption": "55",
+                "age": 5,
+                "code_name": "Ceilometer",
+                "description": "Ceilometer's goal is to efficiently collect, normalise and transform data produced by OpenStack services. The data it collects is intended to be used to create different views and help solve various telemetry use cases. Aodh and Gnocchi are two examples of services extending Ceilometer data.",
+                "id": 8,
+                "mascot_css_class": "Telemetry",
+                "maturity_points": "1",
+                "name": "Metering & Data Collection Service",
+                "slug": "ceilometer"
+            },
+            {
+                "adoption": "0",
+                "age": 1,
+                "code_name": "CloudKitty",
+                "description": "CloudKitty is a rating-as-a-service project designed to translate metrics to prices. CloudKitty supports multiple collectors, multiple rating policies and multiple outputs.",
+                "id": 31,
+                "mascot_css_class": "CloudKitty",
+                "maturity_points": "0",
+                "name": "Billing and chargebacks",
+                "slug": "cloudkitty"
+            },
+            {
+                "adoption": "0",
+                "age": 1,
+                "code_name": "Monasca",
+                "description": "Monasca is a open-source multi-tenant, highly scalable, performant, fault-tolerant monitoring-as-a-service solution that integrates with OpenStack. It uses a REST API for high-speed metrics processing and querying and has a streaming alarm engine and notification engine.",
+                "id": 32,
+                "mascot_css_class": "Monasca",
+                "maturity_points": "0",
+                "name": "Monitoring",
+                "slug": "monasca"
+            },
+            {
+                "adoption": "0",
+                "age": 1,
+                "code_name": "aodh",
+                "description": "Aodh's goal is to enable the ability to trigger actions based on defined rules against sample or event data collected by Ceilometer.",
+                "id": 35,
+                "mascot_css_class": "Telemetry",
+                "maturity_points": "0",
+                "name": "Alarming Service",
+                "slug": "aodh"
+            },
+            {
+                "adoption": "0",
+                "age": 7,
+                "code_name": "panko",
+                "description": "Panko is designed to provide a metadata indexing, event storage service which enables users to capture the state information of OpenStack resources at a given time. Its aim is to enable a scalable means of storing both short and long term data for use cases such as auditing and system debugging.",
+                "id": 36,
+                "mascot_css_class": "Telemetry",
+                "maturity_points": "0",
+                "name": "Event, Metadata Indexing Service",
+                "slug": "panko"
+            }
+        ],
+        "Networking & Content Delivery": [
+            {
+                "adoption": "93",
+                "age": 5,
+                "code_name": "Neutron",
+                "description": "OpenStack Neutron is an SDN networking project focused on delivering networking-as-a-service (NaaS) in virtual compute environments.",
+                "id": 3,
+                "mascot_css_class": "Barbican",
+                "maturity_points": "7",
+                "name": "Networking",
+                "slug": "neutron"
+            },
+            {
+                "adoption": "16",
+                "age": 3,
+                "code_name": "Designate",
+                "description": null,
+                "id": 15,
+                "mascot_css_class": "Designate",
+                "maturity_points": "3",
+                "name": "DNS Service",
+                "slug": "designate"
+            },
+            {
+                "adoption": "0",
+                "age": 2,
+                "code_name": "Dragonflow",
+                "description": "Dragonflow is a distributed control plane implementation of Neutron. Its mission is to implement advanced networking services driven by the Neutron API and running on a distributed control plane. It\u2019s designed to support containers networking and large scale production loads.",
+                "id": 40,
+                "mascot_css_class": "Dragonflow",
+                "maturity_points": "0",
+                "name": "Neutron Plugin",
+                "slug": "dragonflow"
+            },
+            {
+                "adoption": "0",
+                "age": 1,
+                "code_name": "Kuryr",
+                "description": "Kuryr provides a bridge between container framework networking and storage models to OpenStack networking and storage abstractions.",
+                "id": 41,
+                "mascot_css_class": "Barbican",
+                "maturity_points": "1",
+                "name": "Container plugin",
+                "slug": "kuryr"
+            },
+            {
+                "adoption": "0",
+                "age": 1,
+                "code_name": "Octavia",
+                "description": "Octavia is an open source, operator-scale load balancing solution designed to work with OpenStack. Octavia was borne out of the Neutron LBaaS project, and starting with the Liberty release of OpenStack, Octavia has become the reference implementation for Neutron LBaaS version 2. Octavia accomplishes its delivery of load balancing services by managing a fleet of virtual machines, containers, or bare metal servers\u2014collectively known as amphorae\u2014 which it spins up on demand. This on-demand, horizontal scaling feature differentiates Octavia from other load balancing solutions, thereby making Octavia truly suited \u201cfor the cloud.\u201d",
+                "id": 42,
+                "mascot_css_class": "Octavia",
+                "maturity_points": "1",
+                "name": "Load Balancer",
+                "slug": "octavia"
+            },
+            {
+                "adoption": "0",
+                "age": 1,
+                "code_name": "Tacker",
+                "description": "Tacker provides a generic VNF Manager (VNFM) and an NFV Orchestrator (NFVO) to deploy and operate Network Services and Virtual Network Functions (VNFs) on an NFV infrastructure platform like OpenStack. It is based on ETSI MANO Architectural Framework and provides a functional stack to Orchestrate Network Services end-to-end using VNFs.",
+                "id": 43,
+                "mascot_css_class": "Barbican",
+                "maturity_points": "1",
+                "name": "NFV Orchestration",
+                "slug": "tacker"
+            },
+            {
+                "adoption": "0",
+                "age": 1,
+                "code_name": "Tricircle",
+                "description": "Tricircle provides networking automation across Neutron in multi-region OpenStack deployments. Use cases include application high availability, dual ISPs for internet link redundancy, east-west traffic isolation, cross Nuetron L2 network for NFV, and cloud capacity expansion.",
+                "id": 44,
+                "mascot_css_class": "Barbican",
+                "maturity_points": "0",
+                "name": "Networking Automation for Multi-Region Deployments",
+                "slug": "tricircle"
+            }
+        ],
+        "Security, Identity & Compliance": [
+            {
+                "adoption": "96",
+                "age": 6,
+                "code_name": "Keystone",
+                "description": "Keystone is an OpenStack service that provides API client authentication, service discovery, and distributed multi-tenant authorization by implementing OpenStack\u2019s Identity API. It supports LDAP, OAuth, OpenID Connect, SAML and SQL.",
+                "id": 6,
+                "mascot_css_class": "Barbican",
+                "maturity_points": "6",
+                "name": "Identity service",
+                "slug": "keystone"
+            },
+            {
+                "adoption": "9",
+                "age": 4,
+                "code_name": "Barbican",
+                "description": "Barbican is the OpenStack Key Manager service. It provides secure storage, provisioning and management of secret data, such as passwords, encryption keys, X.509 Certificates and raw binary data. ",
+                "id": 16,
+                "mascot_css_class": "Barbican",
+                "maturity_points": "4",
+                "name": "Key Management",
+                "slug": "barbican"
+            },
+            {
+                "adoption": "2",
+                "age": 2,
+                "code_name": "Congress",
+                "description": "Barbican is the OpenStack Key Manager service. It provides secure storage, provisioning and management of secret data, such as passwords, encryption keys, X.509 Certificates and raw binary data. ",
+                "id": 19,
+                "mascot_css_class": "Congress",
+                "maturity_points": "1",
+                "name": "Governance",
+                "slug": "congress"
+            },
+            {
+                "adoption": "5",
+                "age": 1,
+                "code_name": "Mistral",
+                "description": "Mistral is a workflow service. Most business processes consist of multiple distinct interconnected steps that need to be executed in a particular order in a distributed environment. One can describe such process as a set of tasks and task relations (via YAML-based language) and upload such description to Mistral so that it takes care of state management, correct execution order, parallelism, synchronization and high availability.",
+                "id": 45,
+                "mascot_css_class": "Barbican",
+                "maturity_points": "1",
+                "name": "Workflow service",
+                "slug": "mistral"
+            }
+        ],
+        "Storage, Backup & Recovery": [
+            {
+                "adoption": "52",
+                "age": 7,
+                "code_name": "Swift",
+                "description": "Swift is a highly available, distributed, eventually consistent object/blob store. Organizations can use Swift to store lots of data efficiently, safely, and cheaply. It's built for scale and optimized for durability, availability, and concurrency across the entire data set. Swift is ideal for storing unstructured data that can grow without bound.",
+                "id": 4,
+                "mascot_css_class": "Barbican",
+                "maturity_points": "6",
+                "name": "Object Store",
+                "slug": "swift"
+            },
+            {
+                "adoption": "88",
+                "age": 5,
+                "code_name": "Cinder",
+                "description": "Cinder is a Block Storage service for OpenStack. It virtualizes the management of block storage devices and provides end users with a self service API to request and consume those resources without requiring any knowledge of where their storage is actually deployed or on what type of device. This is done through the use of either a reference implementation (LVM) or plugin drivers for other storage. ",
+                "id": 5,
+                "mascot_css_class": "Cinder",
+                "maturity_points": "7",
+                "name": "Block Storage",
+                "slug": "cinder"
+            },
+            {
+                "adoption": "14",
+                "age": 3,
+                "code_name": "Manila",
+                "description": null,
+                "id": 14,
+                "mascot_css_class": "Manila",
+                "maturity_points": "5",
+                "name": "Shared Filesystems",
+                "slug": "manila"
+            },
+            {
+                "adoption": "0",
+                "age": 1,
+                "code_name": "Karbor",
+                "description": "Karbor deals with protecting the Data and Meta-Data that comprises an OpenStack-deployed application against loss/damage (e.g. backup, replication) - not to be confused with Application Security or DLP. It does that by providing a standard framework of APIs and services that enables vendors to introduce various data protection services into a coherent and unified flow for the user.",
+                "id": 46,
+                "mascot_css_class": "Barbican",
+                "maturity_points": "0",
+                "name": "Application Data Protection as a Service",
+                "slug": "karbor"
+            },
+            {
+                "adoption": "0",
+                "age": 2,
+                "code_name": "Freezer",
+                "description": "Freezer is a distributed backup, restore and disaster recovery as a service platform. It is designed to be multi OS (Linux, Windows, OSX, *BSD), focused on providing efficiency and flexibility for block based backups, file based incremental backups, point-in-time actions, jobs synchronization (i.e. backup synchronization over multiple nodes) and many other features. It is aimed at being useful for all environments, including large ephemeral Clouds. ",
+                "id": 47,
+                "mascot_css_class": "Barbican",
+                "maturity_points": "0",
+                "name": "Backup, Restore, and Disaster Recovery",
+                "slug": "freezer"
+            }
+        ]
+    }
+}
