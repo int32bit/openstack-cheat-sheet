@@ -225,6 +225,39 @@ Provide funding and pledge strategic alignment to the OpenStack mission. There c
 * [Vmware](http://www.vmware.com/)(The industry-leading virtualization software company.)
 * [Docker](https://www.docker.com)(Docker containers and tooling make building and shipping applications dramatically easier and faster.)
 
+## 服务初始化模板--以cinder为例
+
+初始化数据库:
+
+```sql
+CREATE DATABASE cinder;
+GRANT ALL PRIVILEGES ON cinder.* TO 'cinder'@'localhost' IDENTIFIED BY 'CINDER_DBPASS';
+GRANT ALL PRIVILEGES ON cinder.* TO 'cinder'@'%' IDENTIFIED BY 'CINDER_DBPASS';
+```
+
+创建账户:
+
+```sh
+openstack user create --domain default --password CINDER_PASS cinder
+openstack role add --project service --user cinder admin
+```
+
+创建endpoints:
+
+```sh
+openstack service create --name cinder \
+  --description "OpenStack Block Storage" volume
+
+openstack endpoint create --region RegionOne \
+  volume public 'http://controller:8776/v2/%(tenant_id)s'
+
+openstack endpoint create --region RegionOne \
+  volume admin 'http://controller:8776/v2/%(tenant_id)s'
+
+openstack endpoint create --region RegionOne \
+  volume internal 'http://controller:8776/v2/%(tenant_id)s'
+```
+
 ## keystore
 
 ## glance
