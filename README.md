@@ -295,7 +295,7 @@ cinder list --status error --all-tenants | tail -n +4 | head -n -1 | cut -d '|' 
 ### 镜像列表
 
 * [sahara-image-elements](https://github.com/openstack/sahara-image-elements)(Disk image elements for Sahara.)
-* [prepared images](http://sahara-files.mirantis.com/images/upstream/).
+* 如果不想自己做镜像，这里提供现成的镜像下载: [prepared images](http://sahara-files.mirantis.com/images/upstream/).
 * [Building Images for Vanilla Plugin](http://docs.openstack.org/developer/sahara/userdoc/vanilla_imagebuilder.html).
 * [Building Images for Cloudera Plugin](http://docs.openstack.org/developer/sahara/userdoc/cdh_imagebuilder.html).
 
