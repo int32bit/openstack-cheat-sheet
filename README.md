@@ -225,6 +225,32 @@ Provide funding and pledge strategic alignment to the OpenStack mission. There c
 * [Vmware](http://www.vmware.com/)(The industry-leading virtualization software company.)
 * [Docker](https://www.docker.com)(Docker containers and tooling make building and shipping applications dramatically easier and faster.)
 
+## 服务目录
+
+|服务名称|服务类型|服务功能|监听端口|默认endpoints|
+|------|------|------|------|------|
+|ironic|baremetal|裸机服务|6385|http://${HOST}:6385
+|ironic-inspector|裸机自动发现服务|5000|baremetal-introspection|http://${HOST}:5050
+|cinder|volume|块存储服务|9776|http://${HOST}:8776/v2/%(tenant_id)s
+|glance|image|镜像服务|9292|http://${HOST}:9292
+|heat|orchestration|编排服务|8004|http://${HOST}:8004/v1/%(tenant_id)s
+|heat-cfn|cloudformation|--|8000|http://${HOST}:8000/v1
+|keystone|identity|认证服务|5000、35357|http://${HOST}:5000/v3
+|magnum|container-infra|容器编排服务|9511|http://${HOST}:9511/v1
+|mistral|workflow|工作流服务|9898|http://${HOST}:9898/v2
+|neutron|network|网络服务|9696|http://${HOST}:9696
+|nova|compute|计算服务|8774、8773、8775|http://${HOST}:8774/v2.1/%(tenant_id)s
+|sahara|data-processing|大数据服务|8386|http://${HOST}:8386/v1.1/%(project_id)s
+|swift|object-store|对象存储服务|8080|http://${HOST}:8080/v1/AUTH_%(tenant_id)s
+|trove|database|数据库服务|8779|http://${HOST}:8779/v1.0/%(tenant_id)s|
+|designate|dns|DNS服务|9001|http://${HOST}:9001/|
+|barbican|key-manager|密钥服务|9311|http://${HOST}:9311/|
+|zaqar|messaging|消息服务|8888|http://${HOST}:8888/|
+|manila|share|文件共享服务|8786|http://${HOST}:8786/v1/%\(tenant_id\)s|
+|aodh|alarming|告警服务|8042|http://${HOST}:8042|
+|cloudkitty|rating|计费服务|8889|http://${HOST}:8889|
+|ceilometer|metering|计量服务|8777|http://${HOST}:8777|
+
 ## 服务初始化模板--以cinder为例
 
 初始化数据库:
