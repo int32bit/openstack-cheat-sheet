@@ -290,6 +290,38 @@ openstack endpoint create --region RegionOne \
 
 ## nova
 
+### 设置ceph secret:
+
+创建secret声明文件:
+
+```
+cat > secret.xml <<EOF
+<secret ephemeral='no' private='no'>
+        <usage type='ceph'>
+                <name>client.admin secret</name>
+        </usage>
+</secret>
+EOF
+```
+
+创建secret:
+
+```
+sudo virsh secret-define --file secret.xml
+```
+
+获取ceph key:
+
+```
+ceph auth get-key client.admin | sudo tee client.admin.key
+```
+
+关联secret:
+
+```
+sudo virsh secret-set-value --secret {uuid of secret} --base64 $(cat client.admin.key) && rm client.admin.key secret.xml
+```
+
 ### Tips
 
 列出所有的错误云主机:
