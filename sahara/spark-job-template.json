@@ -1,0 +1,12 @@
+{
+    "description": "",
+    "interface": [],
+    "is_protected": false,
+    "is_public": true,
+    "libs": [],
+    "mains": [
+        "715da007-f911-4d42-b42e-f8ba97f2483f"
+    ],
+    "name": "int32bit-spark-wordcount.jar-template",
+    "type": "Spark"
+}

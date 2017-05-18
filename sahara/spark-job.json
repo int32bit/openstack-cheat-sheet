@@ -1,0 +1,20 @@
+{
+    "cluster_id": "27d3fc76-d913-4d64-8491-5fc0968efe90",
+    "is_protected": false,
+    "is_public": true,
+    "interface": {},
+    "job_configs": {
+        "args": [
+            "hdfs://int32bit-spark-spark-master-0:8020/user/ubuntu/hello.txt",
+            "hdfs://int32bit-spark-spark-master-0:8020/user/ubuntu/output2"
+        ],
+        "configs": {
+            "edp.hbase_common_lib": true,
+            "edp.java.java_opts": "",
+            "edp.java.main_class": "sahara.edp.spark.SparkWordCount",
+            "edp.spark.adapt_for_swift": true,
+            "edp.substitute_data_source_for_name": true,
+            "edp.substitute_data_source_for_uuid": true
+        }
+    }
+}

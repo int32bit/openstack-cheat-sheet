@@ -570,6 +570,102 @@ sahara cluster-list
 
 完整脚本地址: [create-spark-cluster.sh](sahara/create-spark-cluster.sh)
 
+### 提交spark任务
+
+初始化变量:
+
+```sh
+# 任务名称
+JOB_NAME=int32bit-spark-wordcount.jar
+# jar包路径
+BINARY_FILE=spark-wordcount.jar
+# input hdfs路径
+INPUT=hdfs://int32bit-spark-spark-master-0:8020/user/ubuntu/hello.txt
+# output hdfs 路径
+OUTPUT=hdfs://int32bit-spark-spark-master-0:8020/user/ubuntu/output2
+# 集群的uuid
+CLUSTER_UUID=27d3fc76-d913-4d64-8491-5fc0968efe90
+# main函数所在的class
+MAIN_CLASS=sahara.edp.spark.SparkWordCount
+```
+
+注意:
+
+* `INPUT`的测试文件需要先上传到hdfs中。
+* `OUTPUT`指定的hdfs路径不能存在
+
+下载并上传jar包到sahara中:
+
+```sh
+# Upload job binary data
+wget 'https://github.com/int32bit/openstack-cheat-sheet/raw/master/sahara/spark-wordcount.jar' -O ${BINARY_FILE}
+sahara job-binary-data-create --name "${JOB_NAME}" --file "${BINARY_FILE}"
+
+# Create job binary
+DATA_ID=$(sahara job-binary-data-list 2>/dev/null | grep -P -- "\s${JOB_NAME}\s" | awk '{print $2}')
+sahara job-binary-create --name "${JOB_NAME}" --url "internal-db://${DATA_ID}"
+```
+
+创建job模板:
+
+```sh
+# Create job template
+BINARY_ID=$(sahara job-binary-list | grep -P -- "\s${JOB_NAME}\s" | awk '{print $2}')
+cat >spark-job-template.json <<EOF
+{
+    "description": "",
+    "interface": [],
+    "is_protected": false,
+    "is_public": true,
+    "libs": [],
+    "mains": [
+        "${BINARY_ID}"
+    ],
+    "name": "${JOB_NAME}-template",
+    "type": "Spark"
+}
+EOF
+sahara job-template-create --json spark-job-template.json
+```
+
+提交job:
+
+```sh
+# Submit job
+JOB_TEMPLATE_UUID=$(sahara job-template-list 2>/dev/null | grep -P -- "\s${JOB_NAME}-template\s" | awk '{print $2}')
+cat >job.json <<EOF
+{
+    "cluster_id": "${CLUSTER_UUID}",
+    "is_protected": false,
+    "is_public": true,
+    "interface": {},
+    "job_configs": {
+        "args": [
+            "${INPUT}",
+            "${OUTPUT}"
+        ],
+        "configs": {
+            "edp.hbase_common_lib": true,
+            "edp.java.java_opts": "",
+            "edp.java.main_class": "${MAIN_CLASS}",
+            "edp.spark.adapt_for_swift": true,
+            "edp.substitute_data_source_for_name": true,
+            "edp.substitute_data_source_for_uuid": true
+        }
+    }
+}
+EOF
+sahara job-create --job-template "${JOB_TEMPLATE_UUID}" --json job.json
+```
+
+查看job状态:
+
+```sh
+sahara job-list
+```
+
+完整脚本: [submit-spark-job.sh](sahara/submit-spark-job.sh)
+
 ## manila
 
 ## magnum
