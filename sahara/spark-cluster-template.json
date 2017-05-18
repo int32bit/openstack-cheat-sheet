@@ -1,0 +1,32 @@
+{
+    "anti_affinity": [],
+    "cluster_configs": {
+        "HDFS": {
+            "dfs.replication": 1
+        },
+        "Spark": {},
+        "general": {
+            "Enable XFS": true
+        }
+    },
+    "description": "spark 1.6.0",
+    "hadoop_version": "1.6.0",
+    "is_protected": false,
+    "is_public": true,
+    "name": "test-cluster-template",
+    "node_groups": [
+        {
+            "count": 1,
+            "name": "test-master",
+            "node_group_template_id": "f54eed0c-8961-43af-a358-1990348f4d4a"
+        },
+        {
+            "count": 1,
+            "name": "test-worker",
+            "node_group_template_id": "cb762b74-cbc1-4afc-9df5-3b3a24d656a2"
+        }
+    ],
+    "plugin_name": "spark",
+    "shares": [],
+    "use_autoconfig": true
+}

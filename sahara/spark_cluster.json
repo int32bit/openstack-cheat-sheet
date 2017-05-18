@@ -1,0 +1,12 @@
+{
+    "cluster_template_id": "e1f3a096-d502-4ab5-8caf-282a69229fc0",
+    "default_image_id": "6ba27a59-ecd7-47d4-8df4-925acb23bb87",
+    "description": "",
+    "hadoop_version": "1.6.0",
+    "is_protected": false,
+    "is_public": true,
+    "name": "test",
+    "neutron_management_network": "e478bc87-a067-402f-98e2-9bdc9b180d5e",
+    "plugin_name": "spark",
+    "user_keypair_id": "server-230"
+}

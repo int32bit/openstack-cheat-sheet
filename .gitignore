@@ -1,0 +1,21 @@
+.coverage
+.venv
+.testrepository
+subunit.log
+.tox
+*,cover
+cover
+*.pyc
+.idea
+*.sw?
+*~
+build
+dist
+harborclient/versioninfo
+*.egg
+*egg-info
+
+# Files created by releasenotes build
+releasenotes/build
+
+.DS_Store

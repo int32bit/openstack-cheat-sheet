@@ -1,0 +1,26 @@
+{
+    "auto_security_group": true,
+    "availability_zone": "",
+    "description": "spark 1.6.0 master node group",
+    "flavor_id": "2",
+    "floating_ip_pool": "7517cbd2-2d07-44ad-8eaa-b9ec7098071a",
+    "hadoop_version": "1.6.0",
+    "image_id": "6ba27a59-ecd7-47d4-8df4-925acb23bb87",
+    "is_protected": false,
+    "is_proxy_gateway": false,
+    "is_public": true,
+    "name": "test-worker",
+    "node_configs": {
+        "HDFS": {}
+    },
+    "node_processes": [
+        "datanode",
+        "slave"
+    ],
+    "plugin_name": "spark",
+    "security_groups": [],
+    "shares": [],
+    "use_autoconfig": true,
+    "volumes_per_node": 1,
+    "volumes_size": 20
+}
