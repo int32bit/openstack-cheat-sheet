@@ -666,6 +666,10 @@ sahara job-list
 
 完整脚本: [submit-spark-job.sh](sahara/submit-spark-job.sh)
 
+### 其它链接
+
+1. sahara测试: [https://github.com/openstack/sahara-tests](https://github.com/openstack/sahara-tests)
+
 ## manila
 
 ## magnum
