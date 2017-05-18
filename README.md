@@ -290,37 +290,46 @@ openstack endpoint create --region RegionOne \
 
 ## nova
 
-### 设置ceph secret:
+### 创建Ceph secret:
 
-创建secret声明文件:
+```sh
+#!/bin/sh
 
-```
+USERNAME=${1:-admin}
+UUID=${2:-$(uuidgen)}
+
+# 生成secret.xml文件
 cat > secret.xml <<EOF
 <secret ephemeral='no' private='no'>
-        <usage type='ceph'>
-                <name>client.admin secret</name>
-        </usage>
+  <uuid>${UUID}</uuid>
+  <usage type='ceph'>
+    <name>client.${USERNAME} secret</name>
+  </usage>
 </secret>
 EOF
+
+# 基于xml文件创建secret
+UUID=$(sudo virsh secret-define --file secret.xml | grep -Po '\w{8}-(\w{4}-){3}\w{12}')
+if [ $? -ne 0 ]; then
+    rm -f client."${USERNAME}".key secret.xml
+    exit 1
+fi
+
+# 获取ceph client的密钥
+KEY=$(ceph auth get-key client."${USERNAME}")
+if [ $? -ne 0 ]; then
+    sudo virsh secret-undefine "${UUID}"
+    exit 1
+fi
+
+# 关联密钥到新创建的secret
+sudo virsh secret-set-value --secret "${UUID}" --base64 "${KEY}" >/dev/null \
+    && rm -f client."${USERNAME}".key secret.xml
+
+echo "Secret $UUID create sucessfully!"
 ```
 
-创建secret:
-
-```
-sudo virsh secret-define --file secret.xml
-```
-
-获取ceph key:
-
-```
-ceph auth get-key client.admin | sudo tee client.admin.key
-```
-
-关联secret:
-
-```
-sudo virsh secret-set-value --secret {uuid of secret} --base64 $(cat client.admin.key) && rm client.admin.key secret.xml
-```
+**👉[scripts/create_libvirt_ceph_secret.sh](scripts/create_libvirt_ceph_secret.sh).**
 
 ### Tips
 
