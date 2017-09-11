@@ -378,6 +378,82 @@ nova show --minimal | grep 'os-extended-volumes:volumes_attached' | cut -d '|' -
 
 ## cinder
 
+[CinderSupportMatrix](https://wiki.openstack.org/wiki/CinderSupportMatrix):
+
+|Driver|Volume|Snapshot|Clone|Replication|Consistency Group|Qos|Extend(扩容)|
+|----|----|----|----|----|----|----|----|
+|Blockbridge|Liberty|Liberty|Liberty|||Liberty|Liberty|
+|CloudByte|Kilo|Kilo|Kilo||||Kilo|
+|Coho Data|Mitaka|Mitaka|Mitaka|||Newton|Mitaka|
+|Coraid|Grizzly|Grizzly|Havana||||Havana|
+|Datera|Juno|Juno|Juno|||Mitaka|Juno|
+|Dell EqualLogic|Havana|Havana|Havana||||Icehouse|
+|Dell Storage Center|Kilo|Kilo|Kilo|Mitaka|Liberty||Kilo|
+|DRBD via DRBDmanage|Liberty|Liberty|Liberty||||Liberty|
+|Dell EMC VMAX AF 250F, 450F, 850F|Mitaka|Mitaka|Mitaka|Ocata|Mitaka|Newton|Mitaka|
+|Dell EMC VMAX3 100K, 200K, 400K|Liberty|Liberty|Liberty|Ocata|Mitaka|Newton|Mitaka|
+|Dell EMC VMAX V2 10K, 20K, 40K|Grizzly|Grizzly|Grizzly||Kilo||Juno|
+|Dell EMC Unity|Ocata|Ocata|Ocata|||Ocata|Ocata|
+|Dell EMC VNX Direct|Icehouse|Icehouse|Icehouse|Mitaka|Juno||Icehouse|
+|Dell EMC XtremIO|Juno|Juno|Juno||Liberty||Juno|
+|Dell EMC ScaleIO|Liberty|Liberty|Liberty||Mitaka|Mitaka|Liberty|
+|Fujitsu ETERNUS|Juno|Juno|Juno||||Juno|
+|GlusterFS|Grizzly|Havana|Havana||||Havana|
+|Hitachi (HUS)|Havana|Havana|Havana||||Havana|
+|Hitachi (HUS-VM)|Juno|Juno|Juno||||Juno|
+|Hitachi (VSP, VSP G1000)|Juno|Juno|Juno||||Juno|
+|Hitachi (VSP G200-G800)|Kilo|Kilo|Kilo||||Kilo|
+|Hitachi (HNAS)|Juno|Juno|Juno||||Juno|
+|HPE 3PAR (StoreServ)|Grizzly|Grizzly|Grizzly|Mitaka|Liberty|Icehouse|Havana|
+|HPE Lefthand (StoreVirtual)|Diablo|Havana|Icehouse|Mitaka|Liberty||Havana|
+|HP MSA|Icehouse|Icehouse|Icehouse||||Icehouse|
+|HPE XP|Liberty|Liberty|Liberty||||Liberty|
+|Huawei T Series V1|Havana|Havana|Havana||||Havana|
+|Huawei T Series V2|Kilo|Kilo|Kilo|||Kilo|Kilo|
+|Huawei V3 Series|Kilo|Kilo|Kilo|Mitaka|Newton|Kilo|Kilo|
+|Huawei 18000 Series|Kilo|Kilo|Kilo|||Kilo|Kilo|
+|Huawei Dorado V3 Series|Ocata|Ocata||Ocata|Ocata||Ocata|
+|IBM DS8000|Havana|Havana|Havana|Juno|Kilo||Havana|
+|IBM FlashSystem|Kilo|Kilo|Kilo||||Kilo|
+|IBM FlashSystem A9000/A9000R|Mitaka|Mitaka|Mitaka|Mitaka|Mitaka|Mitaka|Mitaka|
+|IBM GPFS|Havana|Havana|Havana||||Havana|
+|IBM Storwize family/SVC|Folsom|Folsom|Grizzly|Juno|Kilo|Juno|Havana|
+|IBM NAS|Icehouse|Icehouse|Icehouse||||Icehouse|
+|IBM XIV / Spectrum Accelerate|Folsom|Folsom|Havana|Mitaka|Liberty||Havana|
+|ITRI DISCO|Mitaka|Mitaka|Mitaka||||Mitaka|
+|Lenovo|Liberty|Liberty|Liberty||||Liberty|
+|LVM (Reference)|Folsom|Folsom|Grizzly||||Havana|
+|NetApp Data ONTAP|Essex|Folsom|Grizzly|Havana|Mitaka|Juno|Havana|
+|NetApp E/EF-series|Icehouse|Icehouse|Icehouse||Mitaka||Icehouse|
+|Nexenta|Essex|Essex|Havana||||Havana|
+|NFS (Reference)|Folsom||||||Havana|
+|Nimble Storage|Juno|Juno|Juno||||Juno|
+|Pure Storage|Juno|Juno|Juno|Mitaka|Kilo||Juno|
+|Quobyte|Kilo|Kilo|Kilo||||Kilo|
+|RBD (Ceph)|Cactus|Diablo|Havana||||Havana|
+|Scality|Grizzly|Grizzly|Havana||||Havana|
+|SMB|Juno|Juno|||||Juno|
+|NetApp SolidFire|Folsom|Folsom|Grizzly|Mitaka|Mitaka|Icehouse|Havana|
+|StorPool|Kilo|Kilo|Kilo||||Kilo|
+|Synology|Newton|Newton|Newton||||Newton|
+|Symantec|Kilo|Kilo|Kilo||||Kilo|
+|Tintri|Liberty|Liberty|Liberty||||Liberty|
+|Violin Memory|Kilo|Kilo|Kilo|n/a|n/a|n/a|Kilo|
+|VMware|Havana|Havana|Havana||||Icehouse|
+|Windows Server 2012|Grizzly|Grizzly||||||
+|X-IO technologies|Kilo|Kilo|Kilo|||Kilo|Kilo|
+|Zadara Storage|Folsom|Havana|Havana||||Havana|
+|Solaris (ZFS)|Diablo|||||||
+|ProphetStor (Flexvisor)|Juno|Juno|Juno||Kilo||Juno|
+|Infortrend (EonStor DS/GS/GSe Family)|Liberty|Liberty|Liberty||||Liberty|
+|CoprHD|Newton|Newton|Newton||Newton||Newton|
+|Kaminario|Newton|Newton|Newton|Newton|||Newton|
+|ZTE|Newton|Newton|Newton||||Newton|
+|NEC Storage M series|Ocata|Ocata|Ocata|||Ocata|Ocata|
+|INFINIDAT|Ocata|Ocata|Ocata||||Ocata|
+|QNAP|Ocata|Ocata|Ocata||||Ocata|
+|Reduxio|Ocata|Ocata|Ocata||||Ocata|
+
 获取所有error状态的实例:
 
 ```
