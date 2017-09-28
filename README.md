@@ -454,10 +454,51 @@ nova show --minimal | grep 'os-extended-volumes:volumes_attached' | cut -d '|' -
 |QNAP|Ocata|Ocata|Ocata||||Ocata|
 |Reduxio|Ocata|Ocata|Ocata||||Ocata|
 
-获取所有error状态的实例:
+### 挂载volume到本地
+
+安装cinderclient扩展包:
+
+```sh
+pip install python-brick-cinderclient-ext
+```
+
+attach volume到本地:
+
+```sh
+$ cinder local-attach 9770a53e-91ce-4cd0-afde-5793bfa6b0ef
+
++----------+-----------------------------------+
+| Property | Value                             |
++----------+-----------------------------------+
+| path     | /dev/sdb                          |
+| scsi_wwn | 360000000000000000e00000000010001 |
+| type     | block                             |
++----------+-----------------------------------+
+```
+
+挂载volume:
 
 ```
-cinder list --status error --all-tenants | tail -n +4 | head -n -1 | cut -d '|' -f 2
+$ mkfs.ext4 /dev/sdb
+mke2fs 1.42.13 (17-May-2015)
+Creating filesystem with 262144 4k blocks and 65536 inodes
+Filesystem UUID: d53932de-2844-4f63-8b37-67db52d1a243
+Superblock backups stored on blocks:
+        32768, 98304, 163840, 229376
+
+Allocating group tables: done
+Writing inode tables: done
+Creating journal (8192 blocks): done
+Writing superblocks and filesystem accounting information: done
+
+$ mount /dev/sdb /mnt
+```
+
+umount & detach:
+
+```
+umount /mnt
+cinder local-detach 9770a53e-91ce-4cd0-afde-5793bfa6b0ef
 ```
 
 ## neutron
