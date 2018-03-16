@@ -288,6 +288,8 @@ openstack endpoint create --region RegionOne \
 
 ## glance
 
+* [OpenStack Virtual Machine Image Guide](https://docs.openstack.org/image-guide/): OpenStack镜像制作指南，包括OpenStack镜像必须满足的要求、修改镜像的方法（挂载raw、qcow2格式镜像文件）。
+
 ## nova
 
 ### 创建Ceph secret:
