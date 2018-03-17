@@ -378,7 +378,7 @@ nova show --minimal | grep 'os-extended-volumes:volumes_attached' | cut -d '|' -
 ```
 
 
-## cinder
+## Cinder
 
 [CinderSupportMatrix](https://wiki.openstack.org/wiki/CinderSupportMatrix):
 
@@ -455,6 +455,41 @@ nova show --minimal | grep 'os-extended-volumes:volumes_attached' | cut -d '|' -
 |INFINIDAT|Ocata|Ocata|Ocata||||Ocata|
 |QNAP|Ocata|Ocata|Ocata||||Ocata|
 |Reduxio|Ocata|Ocata|Ocata||||Ocata|
+
+
+### backend配置
+
+#### LVM
+
+```
+[lvm]
+volume_backend_name=lvm
+volume_driver=cinder.volume.drivers.lvm.LVMVolumeDriver
+iscsi_helper=lioadm
+volume_group=cinder-volumes
+volumes_dir=/var/lib/cinder/volumes
+```
+
+#### RBD
+
+```
+[ceph]
+volume_backend_name = ceph
+volume_driver = cinder.volume.drivers.rbd.RBDDriver
+rbd_ceph_conf = /etc/ceph/ceph.conf
+rbd_pool = cinder_pool
+rbd_user = admin
+rbd_secret_uuid = e3e0e2ea-a8ca-4f13-9528-5d5d2d813bc2
+```
+
+#### 创建volume-type:
+
+```
+cinder type-create lvm
+cinder type-key lvm set volume_backend_name=lvm
+cinder type-create ceph
+cinder type-key ceph set volume_backend_name=ceph
+```
 
 ### 挂载volume到本地
 
